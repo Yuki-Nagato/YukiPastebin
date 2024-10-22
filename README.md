@@ -6,7 +6,7 @@ Yuki Pastebin is a tool for transferring text and files, in a local (or public) 
 
 ### Pre-built binaries
 
-Pre-built binaries are available on the [releases](/Yuki-Nagato/YukiPastebin/releases) page.
+Pre-built binaries are available on the [releases](https://github.com/Yuki-Nagato/YukiPastebin/releases) page.
 
 ### From source
 
@@ -17,6 +17,10 @@ Or with command line: Clone this repository, install .NET 6.0 SDK, and execute:
 ```
 dotnet run --project YukiPastebin/YukiPastebin
 ```
+
+### Access
+
+The HTTP server will listen on port 5000 by default. Use your browser to access `http://{server-ip}:5000/`.
 
 ## Configuration
 
