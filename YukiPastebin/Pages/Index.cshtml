@@ -230,6 +230,7 @@
             }
         });
         document.getElementById("form-text").addEventListener("drop", (ev) => {
+            ev.preventDefault();
             for (let item of ev.dataTransfer.items) {
                 console.log(item);
                 if (item.kind === "file") {
