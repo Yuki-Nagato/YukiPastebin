@@ -83,6 +83,7 @@
 
 @section Scripts {
     <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/moment-with-locales.js"></script>
     <script>
         "use strict";
         let uuid = null;
@@ -110,9 +111,7 @@
             uuid = newUuid;
         });
         function timeToReadable(time) {
-            const regex = /^(\d+)-(\d+)-(\d+)T(\d+):(\d+):(\d+).(\d+)(.+)$/
-            const matches = time.match(regex);
-            return `${matches[1]}-${matches[2]}-${matches[3]} ${matches[4]}:${matches[5]}:${matches[6]} ${matches[8]}`;
+            return moment(time).format("YYYY-MM-DD HH:mm:ss Z");
         }
         connection.on("Sync", function (messages, availableMessageIds) {
             console.log(messages, availableMessageIds);
