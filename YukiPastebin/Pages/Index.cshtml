@@ -186,6 +186,7 @@
             for (let file of this.files) {
                 addFile(file);
             }
+            this.value = null;
         });
         document.getElementById("form").addEventListener("submit", async function (ev) {
             ev.preventDefault();
