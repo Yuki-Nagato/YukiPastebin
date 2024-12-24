@@ -13,7 +13,10 @@ namespace YukiPastebin {
             builder.Services.AddSingleton<Storage>();
 
             builder.Services.AddRazorPages().AddViewLocalization();
-            builder.Services.AddSignalR();
+            builder.Services.AddSignalR(options => {
+                options.EnableDetailedErrors = true;
+                options.MaximumReceiveMessageSize = 1024L * 1024 * 1024 * 1024;
+            });
             builder.Services.AddControllers();
 
             builder.WebHost.ConfigureKestrel(options => {
